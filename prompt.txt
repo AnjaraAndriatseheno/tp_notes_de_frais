@@ -1,0 +1,13 @@
+Analyse cette note de frais et extrait les informations comptables.
+Retourne UNIQUEMENT un JSON valide, sans texte supplémentaire, sans balises markdown.
+
+{
+  "type_document": "catégorie du justificatif : restaurant | transport | hôtel | autre",
+  "fournisseur": "nom du commerce ou de la compagnie (ex: SNCF, Bistrot Paul, Ibis) | null si illisible",
+  "date": "date de la dépense au format JJ/MM/AAAA | null si absente",
+  "montant_ttc": "montant total TTC en euros, nombre décimal (ex: 24.50) | null si illisible",
+  "tva": "montant de TVA en euros, nombre décimal (ex: 4.08) | null si absent ou illisible",
+  "devise": "devise utilisée (ex: EUR, USD) — EUR par défaut si non précisée",
+  "description": "courte description libre du motif de la dépense (ex: Déjeuner client, Billet Paris-Lyon)",
+  "confiance": "niveau de confiance global de l'extraction : haute | moyen | basse"
+}
