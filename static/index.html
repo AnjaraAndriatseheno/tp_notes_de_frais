@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notes de frais</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Notes de frais</h1>
+    <p class="subtitle">Prenez en photo un justificatif pour extraire automatiquement les informations</p>
+
+    <div class="upload-zone" id="upload-zone">
+      <input type="file" id="file-input" accept="image/jpeg,image/png,image/webp" />
+      <p>Glissez une image ou cliquez pour choisir</p>
+      <span>JPEG, PNG, WEBP — max 10 Mo</span>
+    </div>
+
+    <div id="preview-container" style="display:none">
+      <img id="preview-img" src="" alt="Aperçu du justificatif" />
+      <button class="btn-analyze" id="btn-analyze" disabled>Analyser la note de frais</button>
+    </div>
+
+    <div id="form-container"></div>
+    <div id="confirmation-container"></div>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
