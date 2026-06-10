@@ -44,17 +44,4 @@ class GoogleSheetsClient:
 
 if __name__ == "__main__":
     client = GoogleSheetsClient()
-
-    fake_data = {
-        "type_document": "restaurant",
-        "fournisseur": "Bistrot Test",
-        "date": "10/06/2025",
-        "montant_ttc": 24.50,
-        "tva": 2.18,
-        "devise": "EUR",
-        "description": "Test d'intégration",
-        "confiance": "haute"
-    }
-
-    client.append_expense(fake_data)
-    print("Ligne ajoutée avec succès !")
+    print("Connexion au Google Sheet réussie !")
